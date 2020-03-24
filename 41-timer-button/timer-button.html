@@ -18,7 +18,10 @@
       $btnAdd.click(function(){
         $timerButton.show({
             num:60,
-            title:'验证码'
+            title:'验证码',
+            onClick:function(){
+              console.log('点击了按钮!')
+            }
           });  
       });
   })
