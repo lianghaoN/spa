@@ -1,11 +1,11 @@
 var $timerButton = (function(){
-    var html ='<input type="button" value="同意（6s）" disabled>',
+    var $btn =$('<input type="button" value="同意（6s）" disabled>'),
     num =6,
     timer;
 
     function show(container){
       //1. DOM draw
-      $(container).html(html);
+      $(container).append($btn);
       //2. event bind
     }
 
