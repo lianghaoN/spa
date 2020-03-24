@@ -14,8 +14,12 @@
 <script>
   $(function(){
       var $btnAdd = $('#add');
+
       $btnAdd.click(function(){
-        $timerButton.show('#main');  
+        $timerButton.show({
+            num:60,
+            title:'验证码'
+          });  
       });
   })
 </script>
