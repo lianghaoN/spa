@@ -1,14 +1,14 @@
 var $timerButton = (function(){
-    var $btn =$('<input type="button" value="同意（6s）" disabled>'),
-    cfg = {
-      container:'body',
-      num : 6,
-      title : '同意'
-    },
-    num,
-    timer;
-
-    function show(conf){
+   function show(conf){
+      var $btn = $('<input type="button" disabled'),
+          cfg{
+              container:'body',
+              num:6,
+              title:'同意',
+              onClick:null
+          },
+          num,
+          timer;
       //1. DOM draw
       $(cfg.container).append($btn);
       $.extend(cfg,conf);
@@ -27,14 +27,12 @@ var $timerButton = (function(){
           }
       },1000);
 
-      $btn.click(function(){
-          alert('就知道你会同意的！');
-      });
-
-      return {
-        show:show
-      }
-  }
+      $btn.click(cfg.onClick);
+    }
+    return {
+      show:show
+    };
+  
 }());
 
 // 不用 page load event
